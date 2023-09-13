@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  api:
+    container_name: poketavern_api
+    image: charapadev/poketavern-api
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:sqlserver://db:1433;databaseName=poketavern;trustServerCertificate=true
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    networks:
+      - api_layer
+      - db_layer
+  db:
+    container_name: poketavern_db
+    image: charapadev/poketavern-db
+    environment:
+      - ACCEPT_EULA=Y
+      - "MSSQL_SA_PASSWORD=@StrongPass123"
+    ports:
+      - 1433:1433
+    networks:
+      - db_layer
+networks:
+  api_layer:
+  db_layer:
