@@ -7,7 +7,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:sqlserver://db:1433;databaseName=poketavern;trustServerCertificate=true
     ports:
-      - 8080:8080
+      - 9000:8080
     depends_on:
       - db
     networks:
