@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/items")
 public class ItemController {
-    private final ItemService itemService;
+    private ItemService itemService;
 
     public ItemController(ItemService itemService) {
         this.itemService = itemService;

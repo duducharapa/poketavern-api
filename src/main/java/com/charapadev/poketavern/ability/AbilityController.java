@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/abilities")
 public class AbilityController {
-    private final AbilityService abilityService;
+    private AbilityService abilityService;
 
     public AbilityController(AbilityService abilityService) {
         this.abilityService = abilityService;

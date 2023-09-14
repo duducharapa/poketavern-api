@@ -10,8 +10,8 @@ import com.charapadev.poketavern.slot.SlotService;
 
 @Service
 public class TeamService {
-    private final TeamRepository teamRepository;
-    private final SlotService slotService;
+    private TeamRepository teamRepository;
+    private SlotService slotService;
 
     public TeamService(TeamRepository teamRepository, SlotService slotService) {
         this.teamRepository = teamRepository;

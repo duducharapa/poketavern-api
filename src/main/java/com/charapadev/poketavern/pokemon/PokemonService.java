@@ -3,12 +3,14 @@ package com.charapadev.poketavern.pokemon;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PokemonService {
-    private final PokemonRepository pokemonRepository;
+    private PokemonRepository pokemonRepository;
 
+    @Autowired
     public PokemonService(PokemonRepository pokemonRepository) {
         this.pokemonRepository = pokemonRepository;
     }

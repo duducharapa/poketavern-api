@@ -12,9 +12,9 @@ import com.charapadev.poketavern.team.Team;
 
 @Service
 public class SlotService {
-    private final PokemonService pokemonService;
-    private final ItemService itemService;
-    private final AbilityService abilityService;
+    private PokemonService pokemonService;
+    private ItemService itemService;
+    private AbilityService abilityService;
 
     public SlotService(PokemonService pokemonService, ItemService itemService, AbilityService abilityService) {
         this.pokemonService = pokemonService;
